@@ -46,7 +46,7 @@ export default function Page() {
             href="/final-project"
             className="flex no-underline hover:bg-pink-500 hover:text-white  font-serif font-semibold text-pink-400 bg-white p-3 rounded-3xl"
           >
-            Home Space
+            Home Page
           </Link>
         </button>
         <button>
