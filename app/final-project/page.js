@@ -2,6 +2,7 @@
 
 import { useUserAuth } from "./_utils/auth-context";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
@@ -15,33 +16,67 @@ export default function Page() {
   };
 
   return (
-    <main>
+    <main className="bg-gradient-to-br from-white to-pink-300 w-screen h-screen">
       {user && (
-        <div>
-          <p>
-            Welcome, {user.displayName} ({user.email})
+        <div className="pt-10 flex flex-col items-center justify-center">
+          <Image
+            src="/toughlogo.png"
+            alt="Logo of website Tough Quokie Club"
+            width={300}
+            height={300}
+          />
+          <p className="flex p-3 font-semibold font-serif text-4xl text-pink-500 justify-center items-center w-screen ">
+            Welcome, {user.displayName}!
           </p>
-          <div>
-            <ul>
-              <li className="flex no-underline hover:underline">
-                <Link href="/week-9/shopping-list">Go to Shopping List</Link>
-              </li>
-              <li className="flex no-underline hover:underline">
-                <Link href="/week-9/profile-page">Go to Profile Page</Link>
-              </li>
-            </ul>
-          </div>
+
+          <p className="pt-10 font-semibold font-serif text-2xl text-pink-400">
+            {" "}
+            Content of Navigation{" "}
+          </p>
+
+          <ul className="mt-2 p-10 bg-white rounded-3xl items-center justify-center">
+            <li className="p-3 hover:bg-pink-300 hover:text-white  font-serif font-semibold text-pink-400 bg-white rounded-full">
+              <Link
+                className="flex items-center justify-center"
+                href="/final-project/tough-quokie-club"
+              >
+                Quote Space
+              </Link>
+            </li>
+            <li className="p-3 hover:bg-pink-300 hover:text-white  font-serif font-semibold text-pink-400 bg-white rounded-full">
+              <Link
+                className="flex items-center justify-center"
+                href="/final-project/profile-page"
+              >
+                Profile Page
+              </Link>
+            </li>
+            <li className="p-3 hover:bg-pink-300 hover:text-white  font-serif font-semibold text-pink-400 bg-white rounded-full">
+              <Link
+                className="flex items-center justify-center"
+                href="/final-project/website-credit-page"
+              >
+                Website Credits
+              </Link>
+            </li>
+          </ul>
         </div>
       )}
 
       {user ? (
-        <div className="flex no-underline hover:underline text-black">
+        <div className="flex pt-5 items-center justify-center no-underline hover:text-pink-400 hover:underline text-slate-500 font-sans font-semibold">
           <button onClick={logout}>Logout</button>
         </div>
       ) : (
-        <div className="flex no-underline hover:underline text-black">
-          <button onClick={login}>Login with GitHub</button>
-        </div>
+        <main className="flex flex-col gap-0 justify-center items-center bg-gradient-to-br from-white to-pink-300 w-screen h-screen">
+          <h1 className="flex p-3 font-semibold font-serif text-4xl text-pink-500 justify-center items-center w-screen ">
+            {" "}
+            But first, let's log in!{" "}
+          </h1>
+          <div className="flex no-underline hover:text-pink-400 hover:underline text-slate-500 font-sans font-semibold">
+            <button onClick={login}>Login with GitHub</button>
+          </div>
+        </main>
       )}
     </main>
   );
