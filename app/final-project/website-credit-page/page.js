@@ -18,14 +18,15 @@ export default function Credit() {
       <p className="mb-2 font-semibold font-serif text-2xl text-pink-500">
         A project of the course Web Development 2
       </p>
-      <p className="mb-2 font-thin font-serif text-pink-400">
-        <ul className="flex flex-col items-center justify-center">
-          <li className="font-bold">Developed by Nguyen Phuong Uyen Tran</li>
-          <li>School of Advanced Digital Technology</li>
-          <li>Southern Alberta Institute of Technology (SAIT)</li>
-          <li className="font-bold">December, 2024</li>
-        </ul>
-      </p>
+      <ul className="flex flex-col items-center justify-center mb-2 font-thin font-serif text-pink-400">
+        <li className="font-bold">Developed by Nguyen Phuong Uyen Tran</li>
+        <li className="font-bold text-sm text-white">
+          (with all her tears and enjoyment :D)
+        </li>
+        <li>School of Advanced Digital Technology</li>
+        <li>Southern Alberta Institute of Technology (SAIT)</li>
+        <li className="font-bold">December, 2024</li>
+      </ul>
       <div className=" flex flex-row justify-center items-center pt-8 pb-8 gap-3 font-semibold font-sans">
         <p className="p-3 bg-white rounded-full text-slate-500"> Visit 📍 </p>
         <button>
