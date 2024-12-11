@@ -30,8 +30,7 @@ export default function Page() {
           </p>
 
           <p className="pt-10 font-semibold font-serif text-2xl text-pink-400">
-            {" "}
-            Content of Navigation{" "}
+            Content of Navigation
           </p>
 
           <ul className="mt-2 p-10 bg-white rounded-3xl items-center justify-center">
@@ -70,8 +69,7 @@ export default function Page() {
       ) : (
         <main className="flex flex-col gap-0 justify-center items-center bg-gradient-to-br from-white to-pink-300 w-screen h-screen">
           <h1 className="flex p-3 font-semibold font-serif text-4xl text-pink-500 justify-center items-center w-screen ">
-            {" "}
-            But first, let's log in!{" "}
+            But first, let's log in!
           </h1>
           <div className="flex no-underline hover:text-pink-400 hover:underline text-slate-500 font-sans font-semibold">
             <button onClick={login}>Login with GitHub</button>
