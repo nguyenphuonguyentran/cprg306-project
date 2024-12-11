@@ -29,7 +29,7 @@ export default function Page() {
         User Profile
       </h1>
       <div className="flex flex-row gap-3 justify-center items-center font-sans font-semibold text-white bg-white rounded-3xl p-10 ">
-        <img
+        <Image
           src={user.photoURL}
           alt="User Photo"
           className="rounded-full shadow-cyan-900 w-20 h-20"
