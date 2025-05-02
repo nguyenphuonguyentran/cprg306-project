@@ -31,6 +31,8 @@ export default function Page() {
       <div className="flex flex-row gap-3 justify-center items-center font-sans font-semibold text-white bg-white rounded-3xl p-10 ">
         <Image
           src={user.photoURL}
+          width={50}
+          height={50}
           alt="User Photo"
           className="rounded-full shadow-cyan-900 w-20 h-20"
         />
